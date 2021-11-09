@@ -1,4 +1,4 @@
 package systems.lab2;
 
-public class FlightMapper {
+public class FlightMapper extends Mapper<> {
 }
