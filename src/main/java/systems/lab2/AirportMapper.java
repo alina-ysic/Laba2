@@ -1,5 +1,5 @@
 package systems.lab2;
 
-public class AirportMapper extends  {
+public class AirportMapper extends Mapper<> {
 
 }
