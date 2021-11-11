@@ -2,6 +2,24 @@ package systems.lab2;
 
 import org.apache.hadoop.io.WritableComparable;
 
-public class AirportIdWritableComparable extends WritableComparable<> {
+import java.io.DataInput;
+import java.io.DataOutput;
+import java.io.IOException;
 
+public class AirportIdWritableComparable extends WritableComparable {
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
+
+    @Override
+    public void write(DataOutput dataOutput) throws IOException {
+
+    }
+
+    @Override
+    public void readFields(DataInput dataInput) throws IOException {
+
+    }
 }
