@@ -1,4 +1,5 @@
 package systems.lab2;
 
-public class AirportIdWritableComparable {
+public class AirportIdWritableComparable extends {
+
 }
