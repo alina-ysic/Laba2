@@ -1,4 +1,4 @@
 package systems.lab2;
 
-public class AirportGroupingComparator {
+public class AirportGroupingComparator extends Grouping{
 }
