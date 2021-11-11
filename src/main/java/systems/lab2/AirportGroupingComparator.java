@@ -7,6 +7,8 @@ public class AirportGroupingComparator extends WritableComparator {
 
     @Override
     public int compare(WritableComparable a, WritableComparable b) {
-        return super.compare(a, b);
+        int airportId1 = ((AirportIdWritableComparable) a).getAirportId();
+        int airportId2 = ((AirportIdWritableComparable) b).getAirportId();
+        return Integer.compare(airportId1, airportId2);
     }
 }
