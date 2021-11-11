@@ -19,8 +19,8 @@ public class FlightDelayApp {
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         job.setPartitionerClass(AirportPartitioner.class);
         job.setGroupingComparatorClass(AirportGroupingComparator.class);
-        //job.setReducerClass(JoinReducer.class);
-        //job.setMapOutputKeyClass(TextPair.class);
+        job.setReducerClass(AirportReducer.class);
+        job.setMapOutputKeyClass(AirportIdWritableComparable.class);
         //job.setOutputKeyClass(Text.class);
         //job.setOutputValueClass(Text.class);
         job.setNumReduceTasks(2);

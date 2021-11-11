@@ -1,4 +1,6 @@
 package systems.lab2;
 
-public class AirportReducer {
+import org.apache.hadoop.mapreduce.Reducer;
+
+public class AirportReducer extends Reducer{
 }
