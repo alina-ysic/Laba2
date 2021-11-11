@@ -15,10 +15,11 @@ public class AirportIdWritableComparable extends WritableComparable {
         this.airportId = airportId;
         this.indicator = indicator;
     }
-    
+
     @Override
     public int compareTo(Object o) {
-        return 0;
+        if (this.getClass() != o.getClass()) return 0;
+        return (this.airportId == o.airportId && this.indicator == o.indicator);
     }
 
     @Override
