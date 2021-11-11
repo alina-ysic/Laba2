@@ -1,5 +1,7 @@
 package systems.lab2;
 
-public class AirportIdWritableComparable extends {
+import org.apache.hadoop.io.WritableComparable;
+
+public class AirportIdWritableComparable extends WritableComparable<> {
 
 }
