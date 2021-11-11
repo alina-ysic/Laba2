@@ -12,7 +12,9 @@ import java.io.IOException;
 public class FlightDelayApp {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
-        if (args.length != )
+        if (args.length != 3) {
+            System.exit(-1);
+        }
         Job job = Job.getInstance();
         job.setJarByClass(FlightDelayApp.class);
         job.setJobName("JoinJob sort");
