@@ -11,6 +11,8 @@ public class AirportIdWritableComparable implements WritableComparable<AirportId
     private int airportId;
     private int indicator;
 
+    public AirportIdWritableComparable() { }
+
     public AirportIdWritableComparable(int airportId, int indicator) {
         this.airportId = airportId;
         this.indicator = indicator;
