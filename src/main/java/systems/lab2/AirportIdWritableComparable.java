@@ -24,7 +24,7 @@ public class AirportIdWritableComparable implements WritableComparable<AirportId
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-
+        
     }
 
     @Override
