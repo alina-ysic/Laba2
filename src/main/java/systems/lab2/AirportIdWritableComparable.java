@@ -6,7 +6,7 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class AirportIdWritableComparable extends WritableComparable<AirportIdWritableComparable> {
+public class AirportIdWritableComparable implements WritableComparable<AirportIdWritableComparable> {
 
     private int airportId;
     private int indicator;
@@ -28,6 +28,9 @@ public class AirportIdWritableComparable extends WritableComparable<AirportIdWri
 
     @Override
     public int compareTo(AirportIdWritableComparable o) {
+        if (this.airportId == o.airportId) return 0;
+        if (this.airportId > o.airportId) return 1;
+        return -1;
         return 0;
     }
 }
