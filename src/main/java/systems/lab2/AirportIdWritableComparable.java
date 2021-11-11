@@ -16,6 +16,10 @@ public class AirportIdWritableComparable implements WritableComparable<AirportId
         this.indicator = indicator;
     }
 
+    public int getAirportId() {
+        return airportId;
+    }
+
     @Override
     public void write(DataOutput dataOutput) throws IOException {
 
