@@ -17,12 +17,6 @@ public class AirportIdWritableComparable extends WritableComparable<AirportIdWri
     }
 
     @Override
-    public int compareTo(Object o) {
-        if (this.getClass() != o.getClass()) return 0;
-        return (this.airportId == o.airportId && this.indicator == o.indicator);
-    }
-
-    @Override
     public void write(DataOutput dataOutput) throws IOException {
 
     }
