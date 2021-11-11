@@ -9,5 +9,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportIdWritableC
     @Override
     protected void map(LongWritable key, Text value, Mapper<LongWritable, Text, AirportIdWritableComparable, Text>.Context context) throws IOException, InterruptedException {
         super.map(key, value, context);
+
+
     }
 }
