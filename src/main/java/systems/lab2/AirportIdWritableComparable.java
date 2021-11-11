@@ -9,8 +9,13 @@ import java.io.IOException;
 public class AirportIdWritableComparable extends WritableComparable {
 
     private int airportId;
-    private int ;
+    private int indicator;
 
+    public AirportIdWritableComparable(int airportId, int indicator) {
+        this.airportId = airportId;
+        this.indicator = indicator;
+    }
+    
     @Override
     public int compareTo(Object o) {
         return 0;
