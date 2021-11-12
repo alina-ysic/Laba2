@@ -39,6 +39,6 @@ public class AirportIdWritableComparable implements WritableComparable<AirportId
         if (this.airportId != o.airportId) {
             return Integer.compare(this.airportId, o.airportId);
         }
-        return Integer.compare();
+        return Integer.compare(this.indicator, o.indicator);
     }
 }
