@@ -26,9 +26,10 @@ public class AirportReducer extends Reducer<AirportIdWritableComparable, Text, T
             sumDelay += delay;
             counter++;
         }
+
         if (counter > 0) {
             float averageDelay = sumDelay / counter;
-            context.write(airportName, new Text(""));
+            context.write(airportName, new Text(String.format("min delay: %f, max delay: %f, average delay: %f", min, max, averageDelay)));
         }
     }
 }
