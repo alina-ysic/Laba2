@@ -5,6 +5,10 @@ import org.apache.hadoop.io.WritableComparator;
 
 public class AirportGroupingComparator extends WritableComparator {
 
+    public AirportGroupingComparator() {
+        super();
+    }
+
     @Override
     public int compare(WritableComparable a, WritableComparable b) {
         System.out.println("COMP EEE");
