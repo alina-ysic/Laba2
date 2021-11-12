@@ -18,6 +18,6 @@ public class FlightMapper extends Mapper<LongWritable, Text, AirportIdWritableCo
         System.out.println(value);
         String[] flightInfo = value.toString().replace(DELIMITER_QUOTE, "").split(DELIMITER_COMMA);
         int airportId = Integer.parseInt(flightInfo[CODE_POS]);
-        int delay = Integer.parseInt(flightInfo[DELAY_POS]);
+        String delay = flightInfo[DELAY_POS];
     }
 }
