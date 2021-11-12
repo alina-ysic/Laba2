@@ -6,10 +6,10 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 import java.util.Iterator;
 
-public class AirportReducer extends Reducer{
+public class AirportReducer extends Reducer<AirportIdWritableComparable, Text, Text, Text> {
 
     @Override
-    protected void reduce(Object key, Iterable values, Context context) throws IOException, InterruptedException {
+    protected void reduce(AirportIdWritableComparable key, Iterable<Text> values, Reducer<AirportIdWritableComparable, Text, Text, Text>.Context context) throws IOException, InterruptedException {
         System.out.println("REDUCE EEE");
         System.out.println(key);
         Iterator<Text> iterator = values.iterator();
