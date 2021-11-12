@@ -7,6 +7,7 @@ public class AirportGroupingComparator extends WritableComparator {
 
     @Override
     public int compare(WritableComparable a, WritableComparable b) {
+        System.out.println("COMP EEE");
         int airportId1 = ((AirportIdWritableComparable) a).getAirportId();
         int airportId2 = ((AirportIdWritableComparable) b).getAirportId();
         return Integer.compare(airportId1, airportId2);

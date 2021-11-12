@@ -10,6 +10,7 @@ public class AirportReducer extends Reducer{
 
     @Override
     protected void reduce(Object key, Iterable values, Context context) throws IOException, InterruptedException {
+        System.out.println("REDUCE EEE");
         System.out.println(key);
         Iterator<Text> iterator = values.iterator();
 
