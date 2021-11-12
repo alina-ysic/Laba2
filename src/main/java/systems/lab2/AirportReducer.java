@@ -8,6 +8,6 @@ public class AirportReducer extends Reducer{
 
     @Override
     protected void reduce(Object key, Iterable values, Context context) throws IOException, InterruptedException {
-        super.reduce(key, values, context);
+        
     }
 }
