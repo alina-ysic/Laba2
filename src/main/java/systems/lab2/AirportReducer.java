@@ -19,7 +19,6 @@ public class AirportReducer extends Reducer<AirportIdWritableComparable, Text, T
         int counter = 0;
 
         while (iterator.hasNext()) {
-            System.out.println(iterator.next());
             float delay = Float.parseFloat(iterator.next().toString());
             if (delay < min) min = delay;
             if (delay > max) max = delay;
