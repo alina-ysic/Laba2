@@ -11,12 +11,13 @@ public class FlightMapper extends Mapper<LongWritable, Text, AirportIdWritableCo
     private static final String DELIMITER_COMMA = ",";
     private static final String DELIMITER_QUOTE = "\"";
     private static final int CODE_POS = 14;
-    private static final int DELAY_POS = 14;
+    private static final int DELAY_POS = 18;
     @Override
     protected void map(LongWritable key, Text value, Mapper<LongWritable, Text, AirportIdWritableComparable, Text>.Context context) throws IOException, InterruptedException {
         //super.map(key, value, context);
         System.out.println(value);
         String[] flightInfo = value.toString().replace(DELIMITER_QUOTE, "").split(DELIMITER_COMMA);
         int airportId = Integer.parseInt(flightInfo[CODE_POS]);
+        int delay = Integer.parseInt(flightInfo[DELAY_POS]);
     }
 }
