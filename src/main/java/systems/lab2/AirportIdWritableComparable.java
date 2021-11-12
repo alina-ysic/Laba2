@@ -36,7 +36,9 @@ public class AirportIdWritableComparable implements WritableComparable<AirportId
 
     @Override
     public int compareTo(AirportIdWritableComparable o) {
-        if (this)
+        if (this.airportId != o.airportId) {
+            return 
+        }
         return Integer.compare(this.airportId, o.airportId);
     }
 }
