@@ -10,8 +10,8 @@ public class AirportReducer extends Reducer<AirportIdWritableComparable, Text, T
 
     @Override
     protected void reduce(AirportIdWritableComparable key, Iterable<Text> values, Reducer<AirportIdWritableComparable, Text, Text, Text>.Context context) throws IOException, InterruptedException {
-        int airportId = key.getAirportId();
         Iterator<Text> iterator = values.iterator();
+        Text airportName = iterator.next();
 
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
