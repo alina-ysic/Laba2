@@ -12,7 +12,7 @@ public class AirportReducer extends Reducer{
     protected void reduce(Object key, Iterable values, Context context) throws IOException, InterruptedException {
         System.out.println(key);
         Iterator<Text> iterator = values.iterator();
-        
+
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
