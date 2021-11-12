@@ -11,6 +11,7 @@ public class FlightMapper extends Mapper<LongWritable, Text, AirportIdWritableCo
     private static final String DELIMITER_COMMA = ",";
     private static final String DELIMITER_QUOTE = "\"";
     private static final int CODE_POS = 14;
+    private static final int DELAY_POS = 14;
     @Override
     protected void map(LongWritable key, Text value, Mapper<LongWritable, Text, AirportIdWritableComparable, Text>.Context context) throws IOException, InterruptedException {
         //super.map(key, value, context);
