@@ -16,7 +16,8 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportIdWritableC
         //super.map(key, value, context);
         //System.out.println("v " + value);
         String[] airportInfo = value.toString().split(DELIMITER);
-        
+        int airportId = Integer.parseInt(airportInfo[CODE_POS]);
+        int airportName = Integer.parseInt(airportInfo[CODE_POS]);
 
     }
 }
