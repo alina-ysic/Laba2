@@ -25,6 +25,7 @@ public class FlightDelayApp {
         job.setGroupingComparatorClass(AirportGroupingComparator.class);
         job.setReducerClass(AirportReducer.class);
         job.setMapOutputKeyClass(AirportIdWritableComparable.class);
+        job.setMapOutputValueClass(AirportIdWritableComparable.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
         job.setNumReduceTasks(2);
