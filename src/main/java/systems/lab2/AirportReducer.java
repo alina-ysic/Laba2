@@ -15,9 +15,16 @@ public class AirportReducer extends Reducer<AirportIdWritableComparable, Text, T
 
         float min = Float.MAX_VALUE;
         float max = 0;
+        float sum = 0;
+        int counter = 0;
 
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
+            int delay = Integer.parseInt(iterator.next());
+            if (delay < min) min = delay;
+            if (delay > max) max = delay;
+            sum += delay;
+            counter++;
         }
     }
 }
