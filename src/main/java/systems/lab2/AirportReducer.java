@@ -15,7 +15,7 @@ public class AirportReducer extends Reducer<AirportIdWritableComparable, Text, T
 
         float min = Float.MAX_VALUE;
         float max = 0;
-        float sum = 0;
+        float sumDelay = 0;
         int counter = 0;
 
         while (iterator.hasNext()) {
@@ -23,8 +23,10 @@ public class AirportReducer extends Reducer<AirportIdWritableComparable, Text, T
             float delay = Float.parseFloat(iterator.next().toString());
             if (delay < min) min = delay;
             if (delay > max) max = delay;
-            sum += delay;
+            sumDelay += delay;
             counter++;
         }
+
+        float averageDelay = sumDelay / counter;
     }
 }
