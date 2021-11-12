@@ -13,7 +13,8 @@ public class AirportReducer extends Reducer<AirportIdWritableComparable, Text, T
         Iterator<Text> iterator = values.iterator();
         Text airportName = iterator.next();
 
-        float min = 
+        float min = Float.MAX_VALUE;
+        float max = 0;
 
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
