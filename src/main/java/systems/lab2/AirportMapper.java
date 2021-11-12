@@ -9,7 +9,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportIdWritableC
 
     private static final int INDICATOR = 0;
     private static final String DELIMITER = "\",\"";
-    private static final 
+    private static final int CODE_POS = 0;
     @Override
     protected void map(LongWritable key, Text value, Mapper<LongWritable, Text, AirportIdWritableComparable, Text>.Context context) throws IOException, InterruptedException {
         //super.map(key, value, context);
