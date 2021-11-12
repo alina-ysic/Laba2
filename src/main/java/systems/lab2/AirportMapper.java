@@ -8,12 +8,13 @@ import java.io.IOException;
 public class AirportMapper extends Mapper<LongWritable, Text, AirportIdWritableComparable, Text> {
 
     private static final int INDICATOR = 0;
-    private static final String DELIMITER = "\",\"";
+    private static final String DELIMITER_COMMA = ",";
+    private static final String DELIMITER_QUOTE = "\"";
     private static final int CODE_POS = 0;
     private static final int DESCRIPTION_POS = 1;
     @Override
     protected void map(LongWritable key, Text value, Mapper<LongWritable, Text, AirportIdWritableComparable, Text>.Context context) throws IOException, InterruptedException {
-        String[] airportInfo = value.toString().split(DELIMITER);
+        String[] airportInfo = value.toString().replace(DELIMITER_QUOTE, "").split(DELIMITER_COMMA);
         if (key.get() != 0) {
             int airportId = Integer.parseInt(airportInfo[CODE_POS]);
             String airportName = airportInfo[DESCRIPTION_POS];
