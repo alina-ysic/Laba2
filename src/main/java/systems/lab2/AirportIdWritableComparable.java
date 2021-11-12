@@ -24,8 +24,8 @@ public class AirportIdWritableComparable implements WritableComparable<AirportId
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        dataOutput.write(airportId);
-        dataOutput.write(indicator);
+        dataOutput.writeInt(airportId);
+        dataOutput.writeInt(indicator);
     }
 
     @Override
