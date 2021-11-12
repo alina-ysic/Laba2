@@ -12,6 +12,7 @@ public class AirportReducer extends Reducer<AirportIdWritableComparable, Text, T
     protected void reduce(AirportIdWritableComparable key, Iterable<Text> values, Reducer<AirportIdWritableComparable, Text, Text, Text>.Context context) throws IOException, InterruptedException {
         Iterator<Text> iterator = values.iterator();
         Text airportName = iterator.next();
+        System.out.println("name " + airportName);
 
         float min = Float.MAX_VALUE;
         float max = 0;
