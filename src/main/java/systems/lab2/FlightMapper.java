@@ -17,9 +17,9 @@ public class FlightMapper extends Mapper<LongWritable, Text, AirportIdWritableCo
         //super.map(key, value, context);
         System.out.println(value);
         String[] flightInfo = value.toString().replace(DELIMITER_QUOTE, "").split(DELIMITER_COMMA);
-        int airportId = Integer.parseInt(flightInfo[CODE_POS]);
+        int airportId = Integer.parse(flightInfo[CODE_POS]);
         String delay = flightInfo[DELAY_POS];
-        if (Integer.parseInt(delay) == 0) return;
+        if (Float.parseFloat(delay) == 0) return;
         context.write(new AirportIdWritableComparable(airportId, INDICATOR), new Text(delay));
     }
 }
