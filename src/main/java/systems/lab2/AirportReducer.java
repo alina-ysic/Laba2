@@ -26,7 +26,9 @@ public class AirportReducer extends Reducer<AirportIdWritableComparable, Text, T
             sumDelay += delay;
             counter++;
         }
-
-        float averageDelay = sumDelay / counter;
+        if (counter > 0) {
+            float averageDelay = sumDelay / counter;
+            context.write();
+        }
     }
 }
